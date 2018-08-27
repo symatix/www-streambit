@@ -6,7 +6,7 @@ const Footer = (props) => {
       <div className="container">
         <div className="row">
           <div className="col-md-6 col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.2s">
-            <h3><img src="assets/img/logo.png" alt="" /></h3>
+            <h3><img src="assets/img/logo-alt2-white.png" alt="" /></h3>
             <p>
               Aorem ipsum dolor sit amet elit sed lum tempor incididunt ut labore el dolore alg minim veniam quis nostrud ncididunt.
             </p>
