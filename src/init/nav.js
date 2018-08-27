@@ -27,11 +27,11 @@ export default [
    {
       id: 6,
       label: "Partners",
-      url: "#portfolio"
+      url: "#partners"
    },
    {
       id: 7,
       label: "Contact",
-      url: "#contact"
+      url: "#contact-map"
    },
 ]
