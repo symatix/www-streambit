@@ -1,6 +1,7 @@
 import React from 'react';
-
+import Icon from '../Icons/Icon';
 // img, name, mood, id
+
 
 const VoicesCard = (props) => {
    const { img, name, mood } = props;
@@ -12,11 +13,8 @@ const VoicesCard = (props) => {
                 <img className="img-fluid" src={img} alt=""/>
                 <div className="team-overlay">
                   <div className="overlay-social-icon text-center">
-                    <ul className="social-icons">
-                      <li><a href="#"><i className="lni-facebook-filled" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i className="lni-twitter-filled" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i className="lni-linkedin-filled" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i className="lni-behance" aria-hidden="true"></i></a></li>
+                    <ul className="social-icons voices-ear">
+                      <Icon id={"ear"} width={"80px"} height={"80px"} fill="rgba(255, 255, 255, 0.9)" />
                     </ul>
                   </div>
                 </div>

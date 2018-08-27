@@ -1316,14 +1316,16 @@ a.back-to-top:hover, a.back-to-top:focus {
   height: 100%;
   position: absolute;
   top: 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.4);
   opacity: 0;
   width: 100%;
+  
   transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   -webkit-transition: all 0.3s ease-in-out 0s;
   -o-transition: all 0.3s ease-in-out 0s;
 }
+
 
 .team-item .overlay-social-icon {
   color: #fff;
@@ -1366,18 +1368,6 @@ a.back-to-top:hover, a.back-to-top:focus {
   -moz-transition: all 0.3s ease-in-out 0s;
   -webkit-transition: all 0.3s ease-in-out 0s;
   -o-transition: all 0.3s ease-in-out 0s;
-}
-
-.team-item .overlay-social-icon .social-icons li a:hover .fa-facebook {
-  background: #3B5998;
-}
-
-.team-item .overlay-social-icon .social-icons li a:hover .fa-twitter {
-  background: #00aced;
-}
-
-.team-item .overlay-social-icon .social-icons li a:hover .fa-instagram {
-  background: #fb3958;
 }
 
 .team-item .info-text {
@@ -2227,6 +2217,9 @@ VOICES
 #voices {
   background: #f3f4f3;
 }
+.voices-ear {
+  margin: 25px 10px;
+}
 
 
 /* ---------------------
@@ -2237,6 +2230,7 @@ equipment
   background: url(../img/background/bg-pricing.jpg);
   background-attachment: fixed;
   overflow: hidden;
+  background-size: 2000px 1000px;
 }
 
 #equipment .section-title-header .section-title {
