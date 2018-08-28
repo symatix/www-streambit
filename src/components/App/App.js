@@ -11,6 +11,7 @@ import Partners from '../Partners/Partners';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 import BackToTop from '../Nav/BackToTop';
+import Player from '../Player/Player';
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
         <Partners/>
         <Contact/>
         <Footer/>
+        <Player />
         <BackToTop />
       </div>
     );
