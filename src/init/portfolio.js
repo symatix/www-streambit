@@ -11,7 +11,7 @@ export default [
             img:"assets/img/speaker/speakers-1.jpg",
             type:"Recording and Mixing",
             year:"2017.",
-            sample:"portfolio/music/radost1.mp3"
+            src:"portfolio/music/radost1.mp3"
          },
          {
             id:"mix-vlasta",
@@ -19,7 +19,7 @@ export default [
             img:"assets/img/speaker/speakers-2.jpg",
             type:"Mixing",
             year:"2015.",
-            sample:"portfolio/music/vlasta1.mp3"
+            src:"portfolio/music/vlasta1.mp3"
          },
       ]
    },
@@ -35,7 +35,7 @@ export default [
             img:"assets/img/speaker/speakers-1.jpg",
             type:"trailer",
             year:"2018.",
-            sample:"portfolio/music/vlasta1.mp3"
+            src:"portfolio/music/vlasta1.mp3"
          },
          {
             id:"prod-shop1",
@@ -43,7 +43,7 @@ export default [
             img:"assets/img/speaker/speakers-2.jpg",
             type:"show opener",
             year:"2018.",
-            sample:"portfolio/music/vlasta1.mp3"
+            src:"portfolio/music/vlasta1.mp3"
          },
       ]
    }

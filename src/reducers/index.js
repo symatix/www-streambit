@@ -5,6 +5,7 @@ import partnersReducer from './voicesReducer';
 import servicesReducer from './servicesReducer';
 import equipmentReducer from './equipmentReducer';
 import portfolioReducer from './portfolioReducer';
+import trackReducer from './trackReducer';
 
 export default combineReducers({
    nav: navReducer,
@@ -12,5 +13,6 @@ export default combineReducers({
    partners: partnersReducer,
    services: servicesReducer,
    equipment: equipmentReducer,
-   portfolio: portfolioReducer
+   portfolio: portfolioReducer,
+   track: trackReducer
 });

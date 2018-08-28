@@ -9,16 +9,20 @@ const style = {
 const PortfolioList = (props) => {
    const { work, id, name, nav, label } = props;
 
-   const renderPortfolio = () => work.map((w, i) =>
-      <PortfolioListCard key={w.id} {...w} />
+   const renderPortfolio = () => work.map((w, i) => 
+      <PortfolioListCard key={w.id} {...w}  />
    )
 
    return(
-              <div className={nav === "music" ? style.active : style.passive} id={nav} role="tabpanel" aria-labelledby={id}>
-                <div id={label}>
-                  {renderPortfolio()}
-                </div>
-              </div>
+      <div 
+         className={nav === "music" ? style.active : style.passive} 
+         id={nav} 
+         role="tabpanel" 
+         aria-labelledby={id} >
+         <div id={label}>
+            {renderPortfolio()}
+         </div>
+      </div>
    )
 }
 

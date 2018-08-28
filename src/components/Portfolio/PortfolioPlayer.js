@@ -1,28 +1,22 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
 import Icon from '../Icons/Icon';
+import { playTrack } from '../../actions/index';
 
 class PortfolioPlayer extends Component {
    constructor(props) {
       super(props);
 
       this.state = {
-         player: null,
+         player: true,
          paused: true,
          muted: false
       }
    }
 
-   componentDidMount() {
-      this.setState({
-         player: document.getElementById(this.props.id)
-      })
-   }
 
    play() {
-      const {player} = this.state;
-      player.paused
-         ? player.play()
-         : player.pause();
+      this.props.playTrack(this.props.track)
 
       this.setState({
          paused: !this.state.paused
@@ -76,11 +70,10 @@ class PortfolioPlayer extends Component {
       const {player} = this.state;
       return (
          <div className="container-audio">
-            <audio id={id} src={sample}></audio>
             {this.renderControls()}
          </div>
       )
    }
 }
 
-export default PortfolioPlayer;
+export default connect(null, { playTrack})(PortfolioPlayer);

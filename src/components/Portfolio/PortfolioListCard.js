@@ -27,7 +27,7 @@ const PortfolioListCard = (props) => {
                      <h5 className="name">{type}</h5>
                   </div>
                   <div className="col-md-2 col-sm-3 col-xs-3">
-                     <PortfolioPlayer sample={sample} id={`player-${id}`} />
+                     <PortfolioPlayer track={props} id={`player-${id}`} />
                   </div>
                </div>
             </div>
