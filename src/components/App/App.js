@@ -1,4 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { removeTrack } from '../../actions';
 import logo from './logo.svg';
 import './App.css';
 
@@ -13,23 +15,27 @@ import Footer from '../Footer/Footer';
 import BackToTop from '../Nav/BackToTop';
 import Player from '../Player/Player';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Header/>
-        <Services/>
-        <Voices/>
-        <Equipment/>
-        <Portfolio/>
-        <Partners/>
-        <Contact/>
-        <Footer/>
-        <Player />
-        <BackToTop />
-      </div>
-    );
-  }
+const App = props => {
+   return(
+      <div className = "App" id = "App" >
+         <Header />
+         <Services />
+         <Voices />
+         <Equipment />
+         <Portfolio />
+         <Partners />
+         <Contact />
+         <Footer />
+         <BackToTop />
+         {props.track 
+            ? <Player track = { props.track } /> 
+            : null}
+      </div >
+   );
 }
 
-export default App;
+function mapStateToProps({ track }) {
+   return { track }
+}
+
+export default connect(mapStateToProps, { removeTrack })(App);

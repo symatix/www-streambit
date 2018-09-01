@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { removeTrack } from '../../actions';
 import PlayerClose from './PlayerClose';
 import PlayerLabel from './PlayerLabel';
 import PlayerProgress from './PlayerProgress';
@@ -20,32 +21,30 @@ class Player extends React.Component {
             play: true,
             currentTime: 0
         }
-        this.audio = new Audio();
-    }
-
-    componentWillReceiveProps(nextProps){
-        if (nextProps.track !== null) {
-            this.audio = new Audio(nextProps.track.src)
-            this.audio.play();
-        }
-        if (nextProps.track === null) {
-            this.audio = null;
-        }
+        this.audio = new Audio(this.props.track.src);
     }
 
     componentDidMount() {
-        if (this.props.track){
-            setInterval(() => {
-                this.setState({
-                    currentTime: Math.trunc(this.audio.currentTime),
-                    close: false,
-                })
-            }, 1000)
+        this.audio.play();
+        setInterval(() => {
+            this.setState({
+                currentTime: Math.trunc(this.audio.currentTime),
+                close: false,
+            })
+        }, 1000)
+    }
+
+    componentWillReceiveProps(nextProps){
+        console.log(nextProps.track.src)
+        if (nextProps.track !== this.props.track){
+            this.audio.pause();
+            this.audio = new Audio(nextProps.track.src)
+            this.audio.play();
         }
     }
 
 
-     play = () => {
+    play = () => {
         this.setState({ play: true })
         this.audio.play();
     }
@@ -56,8 +55,27 @@ class Player extends React.Component {
     }
 
     stop = () => {
-        this.pause();
-        this.audio.currentTime = 0;
+        let playrate = 1;
+        this.audio.playbackRate = -1
+        setTimeout(() => {
+            this.audio.pause();
+            this.audio.playbackRate = 1;
+            this.audio.currentTime = 0;
+            this.setState({ play: false })
+        }, 500)
+        // const dropSpeed = setInterval(() => {
+        //     this.audio.playbackRate = playrate;
+        //     playrate -= 0.01
+        //     console.log(playrate)
+        //     if (playrate <= 0.1) {
+        //         clearInterval(dropSpeed)
+        //         playrate = 1;                
+        //         this.audio.pause();
+        //         this.audio.playbackRate = 1;
+        //         this.audio.currentTime = 0;
+        //         this.setState({ play: false })
+        //     }
+        // }, 5)
     }
 
     handleCurrentTime = (time) => {
@@ -66,20 +84,20 @@ class Player extends React.Component {
     }
    
     handleClose = () => {
-        this.stop();
+        this.audio.pause();
         this.setState({ close: true })
-        setTimeout(() => this.setState({ close: false}), 400)
+        setTimeout(() => {
+            this.props.removeTrack()
+        }, 350)
     }
 
-    renderPlayer = () => {
-        
-        if (!this.props.track){
-            return null;
-        }
+    render() {
         const { track } = this.props;
         const { play, close } = this.state;
         return(
-            <div className={!close ? "audio-player" : "audio-player close-player"}>
+            <div 
+                id="player-component"
+                className={!close ? "audio-player open-player" : "audio-player close-player"}>
                 <PlayerClose 
                     initiateClose={this.handleClose} />
                 <PlayerLabel 
@@ -88,22 +106,15 @@ class Player extends React.Component {
                     play={play}
                     handlePlay={this.play}
                     handleStop={this.stop} />
-                <PlayerProgress 
-                    duration={this.audio.duration} 
-                    currentTime={this.audio.currentTime} 
-                    handleCurrentTime={this.handleCurrentTime} />
+                {this.audio 
+                    ? <PlayerProgress 
+                        duration={this.audio.duration} 
+                        currentTime={this.audio.currentTime} 
+                        handleCurrentTime={this.handleCurrentTime} />
+                    : null}
             </div>
         )
     }
-    render() {
-        return (<div>
-            {this.renderPlayer()}
-        </div>)
-    }
 }
 
-function mapStateToProps({ track }){
-    return { track };
-}
-
-export default connect(mapStateToProps)(Player);
+export default connect(null, {removeTrack})(Player);

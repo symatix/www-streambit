@@ -2788,11 +2788,27 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform:  translate(-50%,0);
   }
   to {
-    -ms-transform: translate(-50%,220px);
-    -moz-transform: translate(-50%,220px);
-    -webkit-transform: translate(-50%,220px);
-    -o-transform: translate(-50%,220px);
-    transform: translate(-50%,220px);
+    -ms-transform: translate(-50%,300px);
+    -moz-transform: translate(-50%,300px);
+    -webkit-transform: translate(-50%,300px);
+    -o-transform: translate(-50%,300px);
+    transform: translate(-50%,300px);
+  }
+}
+@keyframes openPlayer {
+  from {
+    -ms-transform: translate(-50%,300px);
+    -moz-transform: translate(-50%,300px);
+    -webkit-transform: translate(-50%,300px);
+    -o-transform: translate(-50%,300px);
+    transform: translate(-50%,300px);
+  }
+  to {
+    -ms-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -webkit-transform:  translate(-50%, 0);
+    -o-transform:  translate(-50%, 0);
+    transform:  translate(-50%,0);
   }
 }
 .close-player {
@@ -2801,4 +2817,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -ms-animation: closePlayer .4s ease-in;
   -o-animation: closePlayer .4s ease-in;
   animation: closePlayer .4s ease-in;
+}
+.open-player {
+  -webkit-animation: openPlayer .4s ease-out;
+  -moz-animation: openPlayer .4s ease-out;
+  -ms-animation: openPlayer .4s ease-out;
+  -o-animation: openPlayer .4s ease-out;
+  animation: openPlayer .4s ease-out;
 }
