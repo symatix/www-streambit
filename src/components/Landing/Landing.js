@@ -19,7 +19,7 @@ const Landing = (props) => {
           </div>
         </div>
         <div className="carousel-item">
-          <img className="d-block w-100" src="assets/img/slider/slide2.jpg" alt="Second slide" />
+          <img className="d-block w-100" src="assets/img/slider/slide2.png" alt="Second slide" />
           <div className="carousel-caption d-md-block">
             <p className="fadeInUp wow" data-wow-delay=".6s">AMAZING VOICE TALENTS</p>
             <h1 className="wow bounceIn heading" data-wow-delay=".7s">MATCH THE MOOD WITH <br/>THE BRAND</h1>
