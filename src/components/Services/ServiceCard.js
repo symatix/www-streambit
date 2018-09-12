@@ -12,7 +12,7 @@ const ServiceCard = (props) => {
         </div>
         <div className="services-content">
           <h3>
-            <a href="#">{name}</a>
+            <a href="index.html">{name}</a>
           </h3>
           <p>{text}</p>
         </div>

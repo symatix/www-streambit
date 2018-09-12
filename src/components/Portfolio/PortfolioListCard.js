@@ -7,7 +7,6 @@ const PortfolioListCard = (props) => {
       name,
       img,
       type,
-      sample,
       year
    } = props;
 

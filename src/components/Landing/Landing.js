@@ -31,7 +31,7 @@ const Landing = (props) => {
           <div className="carousel-caption d-md-block">
             <p className="fadeInUp wow" data-wow-delay=".6s">streamBit</p>
             <h1 className="wow fadeInUp heading" data-wow-delay=".6s">Book Your Studio Time Now!</h1>
-            <a href="#" className="fadeInUp wow btn btn-common btn-lg" data-wow-delay=".8s">Explore</a>
+            <a href="index.html" className="fadeInUp wow btn btn-common btn-lg" data-wow-delay=".8s">Explore</a>
           </div>
         </div>
       </div>

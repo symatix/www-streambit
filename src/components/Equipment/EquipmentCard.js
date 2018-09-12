@@ -7,7 +7,7 @@ const EquipmentCard = (props) => {
       <div className="col-lg-4 col-md-6 col-sm-12">
          <div className="blog-item">
             <div className="blog-image">
-               <a href="#">
+               <a href="index.html">
                   <img className="img-fluid" src="assets/img/blog/img-1.jpg" alt=""/>
                </a>
             </div>

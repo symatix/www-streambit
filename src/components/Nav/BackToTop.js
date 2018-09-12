@@ -2,7 +2,7 @@ import React from 'react';
 
 const BackToTop = (props) => {
    return (
-      <a href="#" className="back-to-top">
+      <a href="index.html" className="back-to-top">
          <i className="lni-chevron-up"></i>
       </a>
    )

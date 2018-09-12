@@ -14,11 +14,11 @@ const Footer = (props) => {
           <div className="col-md-6 col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.4s">
             <h3>QUICK LINKS</h3>
             <ul>
-              <li><a href="#">About Conference</a></li>
-              <li><a href="#">Our Speakers</a></li>
-              <li><a href="#">Event Shedule</a></li>
-              <li><a href="#">Latest News</a></li>
-              <li><a href="#">Event Photo Gallery</a></li>
+              <li><a href="index.html">About Conference</a></li>
+              <li><a href="index.html">Our Speakers</a></li>
+              <li><a href="index.html">Event Shedule</a></li>
+              <li><a href="index.html">Latest News</a></li>
+              <li><a href="index.html">Event Photo Gallery</a></li>
             </ul>
           </div>
           <div className="col-md-6 col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.6s">
@@ -60,10 +60,10 @@ const Footer = (props) => {
             <div className="widget">
               <h5 className="widget-title">FOLLOW US ON</h5>
               <ul className="footer-social">
-                <li><a className="facebook" href="#"><i className="lni-facebook-filled"></i></a></li>
-                <li><a className="twitter" href="#"><i className="lni-twitter-filled"></i></a></li>
-                <li><a className="linkedin" href="#"><i className="lni-linkedin-filled"></i></a></li>
-                <li><a className="google-plus" href="#"><i className="lni-google-plus"></i></a></li>
+                <li><a className="facebook" href="index.html"><i className="lni-facebook-filled"></i></a></li>
+                <li><a className="twitter" href="index.html"><i className="lni-twitter-filled"></i></a></li>
+                <li><a className="linkedin" href="index.html"><i className="lni-linkedin-filled"></i></a></li>
+                <li><a className="google-plus" href="index.html"><i className="lni-google-plus"></i></a></li>
               </ul>
             </div>
           </div>

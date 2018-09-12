@@ -1,13 +1,12 @@
 import React from 'react';
-import Heading from '../Heading/Heading';
 
 const PortfolioNav = (props) => {
    const { id, name, label, nav } = props;
    
    return (
-      <li className="row nav-item">
+      <li className="nav-item nav-item-rowFix">
          <a
-            className={nav == "music" ? "nav-link active" : "nav-link"}
+            className={nav === "music" ? "nav-link active" : "nav-link"}
             id={id}
             data-toggle="tab"
             href={`#${nav}`}

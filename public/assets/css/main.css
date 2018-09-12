@@ -198,7 +198,7 @@ ul li, ol li {
 .btn {
   font-size: 14px;
   padding: 12px 20px;
-  border-radius: 4px;
+  border-radius: 1px;
   cursor: pointer;
   font-weight: 400;
   color: #fff;
@@ -718,7 +718,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   min-width: 210px;
   background-color: #fff;
   white-space: nowrap;
-  border-radius: 4px;
+  border-radius: 1px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   animation: fadeIn 0.4s;
@@ -893,7 +893,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 #event-slides .video img {
-  border-radius: 4px;
+  border-radius: 1px;
 }
 
 #event-slides .intro-desc {
@@ -964,7 +964,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 /* partners Area */
 #partners .partner-logo {
   text-align: center;
-  border-radius: 4px;
+  border-radius: 1px;
   padding: 15px;
   margin-bottom: 30px;
   display: inline-block;
@@ -987,7 +987,13 @@ a.back-to-top:hover, a.back-to-top:focus {
 #portfolio-tab {
   position: relative;
 }
-
+/* fix for row margin */
+.nav-item-rowFix{
+  margin: 0;
+}
+.hide-overflow{
+  overflow: hidden;
+}
 .portfolio .portfolio-tab-title {
   margin-bottom: 35px;
 }
@@ -1004,7 +1010,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   width: 255px;
   border-bottom: 1px solid #e5e5e5;
   transition: all 500ms ease;
-  padding: 20px 20px;
+  padding: 20px;
 }
 
 .portfolio .portfolio-tab-title .nav-tabs .nav-item.show .nav-link, .portfolio .portfolio-tab-title .nav-tabs .nav-link.active,
@@ -1303,7 +1309,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   background: #fff;
   margin: 15px 0;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 1px;
   position: relative;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.17);
   transition: all 0.3s ease-in-out 0s;
@@ -1368,7 +1374,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   height: 36px;
   background: #e65c00;
   display: block;
-  border-radius: 4px;
+  border-radius: 1px;
   line-height: 36px;
   transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
@@ -1418,7 +1424,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 .blog-item {
   max-width: 370px;
   background-color: #fff;
-  border-radius: 4px;
+  border-radius: 1px;
   margin: 20px auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 300ms ease-in-out;
@@ -1453,7 +1459,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   padding: 4px 27px;
   background-color: white;
   color: #e65c00;
-  border-radius: 4px;
+  border-radius: 1px;
   display: block;
   font-size: 14px;
   font-weight: 500;
@@ -1548,7 +1554,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   margin-bottom: 30px;
   background: #2d2d2d;
   color: #fff;
-  border-radius: 4px;
+  border-radius: 1px;
   -webkit-transition: .3s all;
   -o-transition: .3s all;
   transition: .3s all;
@@ -1757,7 +1763,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   line-height: 35px;
   display: block;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 1px;
   font-size: 15px;
   margin-right: 5px;
   transition: all 0.3s ease-in-out 0s;
@@ -1937,7 +1943,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 .countdown-timer .heading-count h4 span {
   background: #212121;
   padding: 7px 15px;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 
 .countdown-timer .heading-count p {
@@ -1957,7 +1963,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   height: 110px;
   padding: 20px;
   box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border-radius: 1px;
   background: #fff;
   text-align: center;
   font-weight: 400;
@@ -2239,7 +2245,8 @@ equipment
   background-size: 2000px 1000px;
 }
 
-#equipment .section-title-header .section-title {
+#equipment .section-title-header .section-title,
+#equipment .section-title-header .section-subtitle{
   color: #fff;
 }
 

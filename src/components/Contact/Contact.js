@@ -14,7 +14,7 @@ const Contact = (props) => {
           <div className="col-lg-7 col-md-12 col-xs-12">
             <div className="container-form wow fadeInLeft" data-wow-delay="0.2s">
               <div className="form-wrapper">
-                <form role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
+                <form method="post" id="contactForm" name="contact-form" data-toggle="validator">
                   <div className="row">
                     <div className="col-md-6 form-line">
                       <div className="form-group">

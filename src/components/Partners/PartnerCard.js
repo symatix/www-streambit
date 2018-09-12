@@ -5,7 +5,7 @@ const PartnerCard = (props) => {
    return (
       <div className="col-md-3 col-sm-6 col-xs-12">
          <div className="partner-logo">
-            <a href="#"><img className="img-fluid" src={img} alt=""/></a>
+            <a href="index.html"><img className="img-fluid" src={img} alt=""/></a>
          </div>
       </div>
    )

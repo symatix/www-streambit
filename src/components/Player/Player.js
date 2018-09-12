@@ -6,12 +6,6 @@ import PlayerLabel from './PlayerLabel';
 import PlayerProgress from './PlayerProgress';
 import PlayerControls from './PlayerControls';
 
-const sample = {
-    artist: "Radost!",
-    title: "Vikipedija",
-    src: "portfolio/music/radost1.mp3"
-}
-
 class Player extends React.Component {
     constructor(props) {
         super(props);
@@ -25,8 +19,12 @@ class Player extends React.Component {
     }
 
     componentDidMount() {
-        this.audio.play();
-        setInterval(() => {
+        this.audio.onended = () => this.handleClose()
+        this.audio.play();            
+        const positionBar = setInterval(() => {
+            if (this.state.close){
+                return clearInterval(positionBar);
+            }
             this.setState({
                 currentTime: Math.trunc(this.audio.currentTime),
                 close: false,
@@ -35,11 +33,16 @@ class Player extends React.Component {
     }
 
     componentWillReceiveProps(nextProps){
-        console.log(nextProps.track.src)
-        if (nextProps.track !== this.props.track){
+        if (nextProps.track !== this.props.track && nextProps.track){
             this.audio.pause();
             this.audio = new Audio(nextProps.track.src)
-            this.audio.play();
+            this.audio.play(); 
+            this.setState({ play: true })
+            this.audio.onended = () => this.handleClose()
+
+            
+
+
         }
     }
 
@@ -55,31 +58,12 @@ class Player extends React.Component {
     }
 
     stop = () => {
-        let playrate = 1;
-        this.audio.playbackRate = -1
-        setTimeout(() => {
-            this.audio.pause();
-            this.audio.playbackRate = 1;
-            this.audio.currentTime = 0;
-            this.setState({ play: false })
-        }, 500)
-        // const dropSpeed = setInterval(() => {
-        //     this.audio.playbackRate = playrate;
-        //     playrate -= 0.01
-        //     console.log(playrate)
-        //     if (playrate <= 0.1) {
-        //         clearInterval(dropSpeed)
-        //         playrate = 1;                
-        //         this.audio.pause();
-        //         this.audio.playbackRate = 1;
-        //         this.audio.currentTime = 0;
-        //         this.setState({ play: false })
-        //     }
-        // }, 5)
+        this.audio.pause();
+        this.audio.currentTime = 0;
+        this.setState({ play: false })
     }
 
     handleCurrentTime = (time) => {
-        console.log(time)
         this.audio.currentTime = time;
     }
    
@@ -105,6 +89,7 @@ class Player extends React.Component {
                 <PlayerControls
                     play={play}
                     handlePlay={this.play}
+                    handlePause={this.pause}
                     handleStop={this.stop} />
                 {this.audio 
                     ? <PlayerProgress 

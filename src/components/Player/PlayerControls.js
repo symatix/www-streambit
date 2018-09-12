@@ -9,11 +9,11 @@ const iconProps = {
 
 const PlayerControls = (props) => {
     const { width, height, fill } = iconProps;
-    const { play, handlePlay, handleStop } = props;
+    const { play, handlePlay, handleStop, handlePause } = props;
 
     return (
         <div className="audio-player-controls">
-            <div onClick={play ? handleStop : handlePlay}>
+            <div onClick={play ? handlePause : handlePlay}>
                 <Icon
                     css={play ? "rotate" : ""}
                     id={play ? "casette-pause" : "casette-play-button"}

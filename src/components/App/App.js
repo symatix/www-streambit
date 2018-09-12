@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { removeTrack } from '../../actions';
-import logo from './logo.svg';
 import './App.css';
 
 import Header from '../Header/Header';

@@ -9,6 +9,5 @@ export const playTrack = (track) => {
 	return { type: fn.PLAY_TRACK, payload: track }
 }
 export const removeTrack = () => {
-	console.log("removing track")
 	return { type: fn.REMOVE_TRACK }
 }

@@ -7,9 +7,9 @@ const style = {
 }
 
 const PortfolioList = (props) => {
-   const { work, id, name, nav, label } = props;
+   const { work, id, nav, label } = props;
 
-   const renderPortfolio = () => work.map((w, i) => 
+   const renderPortfolio = () => work.map(w => 
       <PortfolioListCard key={w.id} {...w}  />
    )
 

@@ -17,7 +17,7 @@ const Equipment = (props) => {
           <Heading title={"Equipment"} subtitle={"From analog to digital"} />
           {renderEquipment()}
           <div className="col-12 text-center">
-            <a href="#" className="btn btn-common">Read More News</a>
+            <a href="index.html" className="btn btn-common">Read More News</a>
           </div>
         </div>
       </div>

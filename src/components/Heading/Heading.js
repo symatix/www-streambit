@@ -7,7 +7,7 @@ const Heading = (props) => {
       <div className="col-12">
         <div className="section-title-header text-center">
           <h1 className="section-title wow fadeInUp" data-wow-delay="0.2s">{title}</h1>
-          <p className="wow fadeInDown" data-wow-delay="0.2s">{subtitle}</p>
+          <p className="section-subtitle wow fadeInDown" data-wow-delay="0.2s">{subtitle}</p>
         </div>
       </div>
    )
