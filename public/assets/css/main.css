@@ -1421,6 +1421,13 @@ a.back-to-top:hover, a.back-to-top:focus {
   transform: translateY(0px);
 }
 
+.img-fluid-equipment{
+  width: 290px;
+  height: 350px !important;
+  vertical-align: middle;
+  display: table-cell;
+}
+
 .blog-item {
   max-width: 370px;
   background-color: #fff;
@@ -1435,12 +1442,12 @@ a.back-to-top:hover, a.back-to-top:focus {
 .blog-item .blog-image {
   width: 100%;
   max-width: 370px;
+  height: 290px;
   position: relative;
   overflow: hidden;
 }
 
 .blog-item .blog-image img {
-  background: #000;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);

@@ -1,14 +1,14 @@
 import React from 'react';
 
 const EquipmentCard = (props) => {
-   const { name, type, url, company } = props;
+   const { name, type, url, company, img } = props;
 
    return (
       <div className="col-lg-4 col-md-6 col-sm-12">
          <div className="blog-item">
-            <div className="blog-image">
+            <div className="blog-image img-fluid-equipment">
                <a href="index.html">
-                  <img className="img-fluid" src="assets/img/blog/img-1.jpg" alt=""/>
+                  <img className="img-fluid" src={img} alt=""/>
                </a>
             </div>
             <div className="descr">
